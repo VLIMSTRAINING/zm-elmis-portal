@@ -1,0 +1,58 @@
+[
+  {
+    "id": "n0",
+    "category": "Announcement",
+    "title": "Supply Chain Digitization: The Impact of eLMIS in Zambia — Transition Ceremony",
+    "date": "2025-09-30",
+    "excerpt": "At the eLMIS Transition Ceremony, evaluation results showed Facility Edition sites averaging 72% on-time reporting (vs. 70% for Central Edition), a 58.1% increase in average Central Edition user sessions, declining expiry rates, and emergency order rates held below 2.5% across 1,707 facilities.",
+    "tag": "Real Milestone"
+  },
+  {
+    "id": "n1",
+    "category": "Release",
+    "title": "eLMIS Central Edition v9.4 Released",
+    "date": "2026-07-10",
+    "excerpt": "Introduces AMC-based colour alerts on Requisition & Reporting forms, faster Analytics module load times, and bug fixes for the Equipment inventory module.",
+    "tag": "New Release"
+  },
+  {
+    "id": "n2",
+    "category": "Announcement",
+    "title": "CHW Mobile App Now Live in All 10 Provinces",
+    "date": "2026-06-28",
+    "excerpt": "The Community Health Worker / Satellite Site mobile app has completed rollout nationwide, enabling last-mile stock reporting from over 900 community sites.",
+    "tag": "Milestone"
+  },
+  {
+    "id": "n3",
+    "category": "Maintenance",
+    "title": "Scheduled Maintenance – Central Edition Production",
+    "date": "2026-06-15",
+    "excerpt": "Production environment will be unavailable Saturday 20 June, 22:00–02:00 CAT for a database upgrade. The Test environment remains available throughout.",
+    "tag": "Downtime"
+  },
+  {
+    "id": "n4",
+    "category": "Training",
+    "title": "Refresher Training: Requisition & Reporting (R&R) Workflow",
+    "date": "2026-05-30",
+    "excerpt": "Provincial focal point training on the updated R&R submission workflow and new stock-below-minimum alerts is now available on the Tools & Guides page.",
+    "tag": "Training"
+  },
+  {
+    "id": "n5",
+    "category": "Release",
+    "title": "eLMIS Facility Edition v6.2 – Batch & Expiry Alerts",
+    "date": "2026-05-12",
+    "excerpt": "Facility Edition now surfaces batch number and expiry date on every commodity line, with automatic flags for items nearing expiry.",
+    "tag": "New Release"
+  },
+  {
+    "id": "n6",
+    "category": "Announcement",
+    "title": "ZeLISA Assistant Launched",
+    "date": "2026-04-22",
+    "excerpt": "Meet ZeLISA, the Zambia eLMIS Logistics Intelligence and Supply Chain Agent — available now to help answer supply chain, logistics and support questions.",
+    "tag": "New Feature"
+  }
+]

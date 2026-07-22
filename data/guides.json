@@ -1,0 +1,63 @@
+{
+  "releaseNotes": [
+    {
+      "version": "Central Edition v9.4",
+      "date": "2026-07-10",
+      "notes": [
+        "AMC-based colour coding (green/yellow/red) added to Requisition & Reporting forms",
+        "Analytics module load time improved by ~40%",
+        "Fixed equipment inventory sync issue with Facility Edition",
+        "Added export-to-Excel on all report grids"
+      ]
+    },
+    {
+      "version": "Facility Edition v6.2",
+      "date": "2026-05-12",
+      "notes": [
+        "Batch number and expiry date now shown on every commodity line",
+        "Automatic near-expiry flagging (90/60/30 day thresholds)",
+        "Stock-below-minimum alert widget added to dashboard",
+        "Requisition status tracker redesigned"
+      ]
+    },
+    {
+      "version": "CHW Mobile App v3.1",
+      "date": "2026-04-01",
+      "notes": [
+        "Offline-first stock counts with background sync",
+        "Barcode scanning for lowest pack size",
+        "Low-bandwidth mode for rural connectivity",
+        "Bug fixes for Android 13/14 compatibility"
+      ]
+    }
+  ],
+  "userGuides": [
+    { "title": "Central Edition User Guide", "audience": "District & Provincial staff, ZAMMSA hubs", "format": "PDF", "size": "4.2 MB", "file": "assets/docs/central-edition-user-guide.pdf" },
+    { "title": "Facility Edition User Guide", "audience": "Facility staff / pharmacy", "format": "PDF", "size": "3.6 MB", "file": "assets/docs/facility-edition-user-guide.pdf" },
+    { "title": "CHW / Satellite Mobile App Guide", "audience": "Community Health Workers", "format": "PDF", "size": "2.1 MB", "file": "assets/docs/chw-app-guide.pdf" },
+    { "title": "Requisition & Reporting (R&R) Quick Reference", "audience": "All facility users", "format": "PDF", "size": "0.8 MB", "file": "assets/docs/rr-quick-reference.pdf" },
+    { "title": "Data Analytics & Supply Chain Portal Guide", "audience": "MOH Control Tower, Program managers", "format": "PDF", "size": "5.4 MB", "file": "assets/docs/analytics-portal-guide.pdf" }
+  ],
+  "reportCatalogue": [
+    { "name": "Facilities Reported / Not Reported", "description": "Tracks which facilities submitted or missed their R&R for the period", "category": "Admin" },
+    { "name": "Reporting Rate Summary", "description": "Percentage of facilities that reported within a defined period, by district", "category": "Admin" },
+    { "name": "Stock Status Graph", "description": "Visualizes stock levels over time per commodity and facility", "category": "Graph" },
+    { "name": "Consumption Trend Graph", "description": "Shows consumption quantities across reporting periods for forecasting", "category": "Graph" },
+    { "name": "Stock Status Map", "description": "Colour-coded geographic view of facility stock levels across Zambia", "category": "Map" },
+    { "name": "Requisition & Report (R&R)", "description": "Primary logistics document: balances, receipts, issues, and order quantity", "category": "Logistics" },
+    { "name": "Average Monthly Consumption (AMC)", "description": "Calculates AMC per commodity/facility — the basis for order quantities", "category": "Logistics" },
+    { "name": "Months of Stock (MOS) Report", "description": "Stock remaining at current consumption rates per facility", "category": "Logistics" },
+    { "name": "Lab Equipment Functionality", "description": "Reports on functional status of lab equipment for maintenance planning", "category": "Logistics" },
+    { "name": "Expiry Report", "description": "Lists commodities approaching or past expiry — prevents wastage", "category": "Logistics" }
+  ],
+  "relatedSystems": [
+    { "title": "QAT Tool", "description": "Modernized solution for country-led forecasting and supply planning, used alongside eLMIS for national quantification cycles." },
+    { "title": "WHXpert WMS", "description": "Warehouse management system assisting with daily warehouse and hub operations at ZAMMSA." },
+    { "title": "eLMIS CHW App", "description": "Android application for Community Health Workers and satellite sites, integrated with Facility Edition data." }
+  ],
+  "tools": [
+    { "title": "CHW / Satellite Site Mobile App (Android)", "description": "Offline-capable stock reporting app for community health workers and satellite sites.", "action": "download", "file": "assets/downloads/elmis-chw-app-latest.apk", "version": "v3.1", "size": "38 MB" },
+    { "title": "Barcode Scanner Configuration Tool", "description": "Utility for pairing handheld barcode scanners with Facility Edition for lowest-pack-size tracking.", "action": "download", "file": "assets/downloads/barcode-scanner-config-tool.zip", "version": "v1.2", "size": "6 MB" },
+    { "title": "Offline Data Validation Tool", "description": "Desktop tool to validate R&R exports before upload when connectivity is limited.", "action": "download", "file": "assets/downloads/rr-validation-tool.zip", "version": "v2.0", "size": "12 MB" }
+  ]
+}
