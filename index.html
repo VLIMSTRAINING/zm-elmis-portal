@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>eLMIS Zambia — Electronic Logistics Management Information System</title>
-<meta name="description" content="Prototype portal for Zambia's eLMIS — access Central Edition, download the CHW mobile app, explore supply chain analytics, and chat with ZeLISA." />
+<title>eLMIS Zambia, Electronic Logistics Management Information System</title>
+<meta name="description" content="Prototype portal for Zambia's eLMIS. Access Central Edition, download the CHW mobile app, explore supply chain analytics, and chat with ZeLISA." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css" />
@@ -31,7 +31,7 @@
     <div class="nav-cta">
       <a href="#environments" class="btn btn-secondary btn-sm">Test Environment</a>
       <a href="https://zm-elmis.org/public/pages/login.html" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Production Login</a>
-      <button class="nav-toggle" aria-label="Menu">☰</button>
+      <button class="nav-toggle" aria-label="Menu" data-icon="menu"></button>
     </div>
   </div>
 </header>
@@ -43,7 +43,7 @@
       <div>
         <span class="eyebrow" style="background:rgba(255,255,255,.14); color:#fff;">Prototype · Not affiliated with MOH production systems</span>
         <h1>One home for Zambia's Logistics Management Information System</h1>
-        <p class="lead">Access Central Edition, track supply chain performance, download the CHW mobile app, and get help from ZeLISA — Zambia's eLMIS logistics &amp; supply chain assistant.</p>
+        <p class="lead">Access Central Edition, track supply chain performance, download the CHW mobile app, and get help from ZeLISA, Zambia's eLMIS logistics &amp; supply chain assistant.</p>
         <div class="hero-actions">
           <a href="analytics.html" class="btn btn-primary">Explore Analytics</a>
           <a href="zelisa.html" class="btn btn-outline-light">Chat with ZeLISA</a>
@@ -55,19 +55,26 @@
         <div class="env-option">
           <div>
             <div class="env-name"><span class="env-dot prod"></span>Production</div>
-            <div class="env-desc">Live operational data — requisitions, orders, reports</div>
+            <div class="env-desc">Live operational data for requisitions, orders and reports</div>
           </div>
           <a href="https://zm-elmis.org/public/pages/login.html" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Login →</a>
         </div>
         <div class="env-option">
           <div>
             <div class="env-name"><span class="env-dot test"></span>Test / UAT</div>
-            <div class="env-desc">Safe sandbox for training &amp; testing — no live data</div>
+            <div class="env-desc">Safe sandbox for training &amp; testing, with no live data</div>
           </div>
           <a href="https://test.zm-elmis.org/public/pages/login.html" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="background:transparent; color:#fff; border-color:rgba(255,255,255,.5);">Login →</a>
         </div>
+        <div class="env-option">
+          <div>
+            <div class="env-name"><span class="env-dot update"></span>eLMIS Updater</div>
+            <div class="env-desc">Check which facilities are on the latest Facility Edition release</div>
+          </div>
+          <a href="https://rollout.elmis-fe.com/login" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="background:transparent; color:#fff; border-color:rgba(255,255,255,.5);">Login →</a>
+        </div>
         <p class="small" style="color:rgba(255,255,255,.65); margin:14px 0 0; font-size:12px;">
-          Placeholder URL — update to your actual Test/UAT endpoint before go-live.
+          Placeholder URL for Test/UAT. Update to your actual endpoint before go-live.
         </p>
       </div>
     </div>
@@ -88,7 +95,7 @@
       <div>
         <span class="eyebrow">About eLMIS</span>
         <h2>A national, open-source logistics platform</h2>
-        <p>eLMIS is built on OpenLMIS — open source, highly configurable, and API-enabled — running across two editions: <strong>Facility Edition</strong>, live in 1,710 health facilities, and <strong>Central Edition</strong>, providing nationwide oversight. Together they've cut report generation time from 15+ days to under a day.</p>
+        <p>eLMIS is built on OpenLMIS, an open source, highly configurable and API-enabled platform, running across two editions: <strong>Facility Edition</strong>, live in 1,710 health facilities, and <strong>Central Edition</strong>, providing nationwide oversight. Together they've cut report generation time from 15+ days to under a day.</p>
         <div class="hero-actions">
           <a href="about.html" class="btn btn-primary">Read the full story</a>
         </div>
@@ -112,12 +119,12 @@
       <div>
         <span class="eyebrow">Mobile App</span>
         <h2>Community Health Worker &amp; Satellite Site App</h2>
-        <p>Report stock counts and consumption from the last mile — even offline. Built for Community Health Workers and satellite sites without reliable connectivity, with automatic sync once back online.</p>
+        <p>Report stock counts and consumption from the last mile, even offline. Built for Community Health Workers and satellite sites without reliable connectivity, with automatic sync once back online.</p>
         <div class="card-grid cols-2" style="margin:20px 0;">
-          <div class="flex items-center gap-12"><div class="icon-badge green" style="margin:0;">✓</div><span class="small">Offline-first stock counts</span></div>
-          <div class="flex items-center gap-12"><div class="icon-badge green" style="margin:0;">✓</div><span class="small">Barcode scanning support</span></div>
-          <div class="flex items-center gap-12"><div class="icon-badge green" style="margin:0;">✓</div><span class="small">Low-bandwidth sync mode</span></div>
-          <div class="flex items-center gap-12"><div class="icon-badge green" style="margin:0;">✓</div><span class="small">Works on Android 8+</span></div>
+          <div class="flex items-center gap-12"><div class="icon-badge green" style="margin:0; width:28px; height:28px;" data-icon="check"></div><span class="small">Offline-first stock counts</span></div>
+          <div class="flex items-center gap-12"><div class="icon-badge green" style="margin:0; width:28px; height:28px;" data-icon="check"></div><span class="small">Barcode scanning support</span></div>
+          <div class="flex items-center gap-12"><div class="icon-badge green" style="margin:0; width:28px; height:28px;" data-icon="check"></div><span class="small">Low-bandwidth sync mode</span></div>
+          <div class="flex items-center gap-12"><div class="icon-badge green" style="margin:0; width:28px; height:28px;" data-icon="check"></div><span class="small">Works on Android 8+</span></div>
         </div>
         <div class="hero-actions">
           <a href="tools-guides.html#chw-app" class="btn btn-primary">Download the App</a>
@@ -128,7 +135,7 @@
         <div style="font-size:13px; color:var(--gray-600); text-transform:uppercase; letter-spacing:.05em; margin-bottom:10px;">Current Version</div>
         <div style="font-size:32px; font-weight:800; color:var(--teal-dark);">v3.1</div>
         <p class="small" style="margin:10px 0 22px;">Android · 38 MB · Released 1 Apr 2026</p>
-        <a href="tools-guides.html#chw-app" class="btn btn-primary btn-block">⬇ Download APK</a>
+        <a href="tools-guides.html#chw-app" class="btn btn-primary btn-block"><span data-icon="download" style="display:inline-flex; vertical-align:middle;"></span> Download APK</a>
       </div>
     </div>
   </div>
@@ -140,26 +147,26 @@
     <div class="section-head">
       <span class="eyebrow">Data &amp; Analytics</span>
       <h2>Supply Chain Portal &amp; Reports</h2>
-      <p>End-to-end visibility across financing, inventory, distribution, quantification and performance monitoring — built from eLMIS Central &amp; Facility Edition data.</p>
+      <p>End-to-end visibility across financing, inventory, distribution, quantification and performance monitoring, built from eLMIS Central &amp; Facility Edition data.</p>
     </div>
     <div class="card-grid cols-4">
       <div class="card">
-        <div class="icon-badge teal">💰</div>
+        <div class="icon-badge teal" data-icon="cash"></div>
         <h3 style="font-size:16px;">Financing</h3>
         <p class="small">Funding sources, allocation vs. disbursement.</p>
       </div>
       <div class="card">
-        <div class="icon-badge orange">📦</div>
+        <div class="icon-badge orange" data-icon="box"></div>
         <h3 style="font-size:16px;">Inventory</h3>
         <p class="small">Stock on hand, wastage, emergency orders.</p>
       </div>
       <div class="card">
-        <div class="icon-badge green">🚚</div>
+        <div class="icon-badge green" data-icon="truck"></div>
         <h3 style="font-size:16px;">Distribution</h3>
         <p class="small">Order lead time &amp; fill rate by facility.</p>
       </div>
       <div class="card">
-        <div class="icon-badge red">📈</div>
+        <div class="icon-badge red" data-icon="trendUp"></div>
         <h3 style="font-size:16px;">Performance</h3>
         <p class="small">R&amp;R rejection rates, report timeliness.</p>
       </div>
@@ -190,23 +197,23 @@
     <div class="section-head">
       <span class="eyebrow">Tools &amp; Guides</span>
       <h2>Everything you need to get productive</h2>
-      <p>Release notes, user guides for every edition, and support tools — all in one place.</p>
+      <p>Release notes, user guides for every edition, and support tools, all in one place.</p>
     </div>
     <div class="card-grid cols-3">
       <div class="card">
-        <div class="icon-badge teal">📋</div>
+        <div class="icon-badge teal" data-icon="clipboard"></div>
         <h3 style="font-size:16px;">Release Notes</h3>
         <p class="small">Track what's new in Central Edition, Facility Edition and the CHW app.</p>
         <a href="tools-guides.html#release-notes" class="btn btn-secondary btn-sm">View releases →</a>
       </div>
       <div class="card">
-        <div class="icon-badge orange">📘</div>
+        <div class="icon-badge orange" data-icon="book"></div>
         <h3 style="font-size:16px;">User Guides</h3>
         <p class="small">Step-by-step PDF guides for every user type, from facility staff to MOH Control Tower.</p>
         <a href="tools-guides.html#user-guides" class="btn btn-secondary btn-sm">Browse guides →</a>
       </div>
       <div class="card">
-        <div class="icon-badge green">🛠</div>
+        <div class="icon-badge green" data-icon="wrench"></div>
         <h3 style="font-size:16px;">Tools &amp; Downloads</h3>
         <p class="small">CHW app, barcode scanner config, and offline data validation tools.</p>
         <a href="tools-guides.html#tools" class="btn btn-secondary btn-sm">Get tools →</a>
@@ -222,7 +229,7 @@
       <div>
         <span class="eyebrow" style="background:rgba(255,255,255,.14); color:#fff;">Ask ZeLISA</span>
         <h2>Your logistics &amp; supply chain assistant</h2>
-        <p>ZeLISA — the Zambia eLMIS Logistics Intelligence and Supply Chain Agent — answers questions about stock levels, orders, requisitions, and system support, any time.</p>
+        <p>ZeLISA, the Zambia eLMIS Logistics Intelligence and Supply Chain Agent, answers questions about stock levels, orders, requisitions, and system support, any time.</p>
         <div class="hero-actions">
           <a href="zelisa.html" class="btn btn-primary">Start a conversation</a>
         </div>

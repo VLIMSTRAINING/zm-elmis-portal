@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Ask ZeLISA — eLMIS Zambia</title>
+<title>Ask ZeLISA, eLMIS Zambia</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css" />
@@ -29,7 +29,7 @@
     <div class="nav-cta">
       <a href="index.html#environments" class="btn btn-secondary btn-sm">Test Environment</a>
       <a href="https://zm-elmis.org/public/pages/login.html" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Production Login</a>
-      <button class="nav-toggle" aria-label="Menu">☰</button>
+      <button class="nav-toggle" aria-label="Menu" data-icon="menu"></button>
     </div>
   </div>
 </header>
@@ -37,7 +37,7 @@
 <section class="page-hero">
   <div class="container">
     <div class="breadcrumb"><a href="index.html">Home</a> / Ask ZeLISA</div>
-    <h1>ZeLISA — Logistics &amp; Supply Chain Assistant</h1>
+    <h1>ZeLISA, Logistics &amp; Supply Chain Assistant</h1>
     <p style="max-width:640px; color:rgba(255,255,255,.85);">Zambia's eLMIS Logistics Intelligence and Supply Chain Agent. Ask about stock levels, orders, requisitions, or general system support.</p>
   </div>
 </section>
@@ -45,7 +45,7 @@
 <section class="section" style="padding-top:36px;">
   <div class="container">
     <div class="disclaimer-banner">
-      ⚠ Prototype demo — ZeLISA's responses here are simulated/canned for illustration. A production build would connect to the eLMIS reporting data and a real assistant backend.
+      <span class="banner-icon" data-icon="alert"></span>Prototype demo. ZeLISA's responses here are simulated/canned for illustration. A production build would connect to the eLMIS reporting data and a real assistant backend.
     </div>
 
     <div class="zelisa-shell">
@@ -82,12 +82,12 @@
         </div>
         <div class="zelisa-messages" id="chat-messages">
           <div class="msg bot">
-            👋 Hi, I'm <strong>ZeLISA</strong> — the Zambia eLMIS Logistics Intelligence and Supply Chain Agent. Ask me about stock levels, orders, requisitions, or eLMIS support, and I'll do my best to help.
+            <span class="banner-icon" data-icon="chat" style="vertical-align:-3px; margin-right:6px;"></span>Hi, I'm <strong>ZeLISA</strong>, the Zambia eLMIS Logistics Intelligence and Supply Chain Agent. Ask me about stock levels, orders, requisitions, or eLMIS support, and I'll do my best to help.
           </div>
         </div>
         <form class="zelisa-input" id="chat-form">
           <input type="text" id="chat-input" placeholder="Ask ZeLISA about stock, orders, or support…" autocomplete="off" />
-          <button type="submit" aria-label="Send">➤</button>
+          <button type="submit" aria-label="Send" data-icon="send"></button>
         </form>
       </div>
     </div>

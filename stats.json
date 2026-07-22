@@ -1,0 +1,8 @@
+[
+  { "id": "fe-sites", "label": "Health Facilities on Facility Edition", "value": 1710, "suffix": "", "icon": "hospital" },
+  { "id": "ce-coverage", "label": "Central Edition National Coverage", "value": 100, "suffix": "%", "icon": "map" },
+  { "id": "report-turnaround", "label": "Report Turnaround Time", "value": 1, "suffix": " day (was 15+)", "icon": "clock" },
+  { "id": "monthly-reports", "label": "Reports Digitized per Month", "value": 2000, "suffix": "+", "icon": "doc" },
+  { "id": "session-growth", "label": "Growth in CE User Sessions", "value": 58.1, "suffix": "%", "icon": "chart" },
+  { "id": "chw-sites", "label": "Facilities Reached via CHW App", "value": 42, "suffix": "%", "icon": "mobile" }
+]

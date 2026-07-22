@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Data &amp; Analytics — eLMIS Zambia</title>
+<title>Data &amp; Analytics, eLMIS Zambia</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css" />
@@ -30,7 +30,7 @@
     <div class="nav-cta">
       <a href="index.html#environments" class="btn btn-secondary btn-sm">Test Environment</a>
       <a href="https://zm-elmis.org/public/pages/login.html" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Production Login</a>
-      <button class="nav-toggle" aria-label="Menu">☰</button>
+      <button class="nav-toggle" aria-label="Menu" data-icon="menu"></button>
     </div>
   </div>
 </header>
@@ -39,25 +39,25 @@
   <div class="container">
     <div class="breadcrumb"><a href="index.html">Home</a> / Data &amp; Analytics</div>
     <h1>Supply Chain Portal &amp; Analytics</h1>
-    <p style="max-width:640px; color:rgba(255,255,255,.85);">End-to-end visibility across financing, inventory, distribution, quantification and performance — sourced from eLMIS Central &amp; Facility Edition reporting data.</p>
+    <p style="max-width:640px; color:rgba(255,255,255,.85);">End-to-end visibility across financing, inventory, distribution, quantification and performance, sourced from eLMIS Central &amp; Facility Edition reporting data.</p>
   </div>
 </section>
 
 <section class="section" style="padding-top:36px;">
   <div class="container">
     <div class="disclaimer-banner">
-      ⚠ This dashboard is populated with sample data for prototyping purposes. Connect it to the eLMIS Reporting Service (SRS) / OLAP warehouse for live figures.
+      <span class="banner-icon" data-icon="alert"></span>This dashboard is populated with sample data for prototyping purposes. Connect it to the eLMIS Reporting Service (SRS) / OLAP warehouse for live figures.
     </div>
 
     <div class="dash-shell">
       <aside class="dash-sidebar">
-        <div class="dash-brand">📊 Zambia Supply Chain Portal</div>
-        <button class="dash-tab active" data-tab="financing">💰 Financing</button>
-        <button class="dash-tab" data-tab="inventory">📦 Inventory</button>
-        <button class="dash-tab" data-tab="distribution">🚚 Distribution</button>
-        <button class="dash-tab" data-tab="quantification">📊 Quantification</button>
-        <button class="dash-tab" data-tab="performance">📈 Performance Monitoring</button>
-        <button class="dash-tab" data-tab="alerts">🚨 AMC Alerts</button>
+        <div class="dash-brand"><span class="tab-icon" data-icon="chart"></span> Zambia Supply Chain Portal</div>
+        <button class="dash-tab active" data-tab="financing"><span class="tab-icon" data-icon="cash"></span> Financing</button>
+        <button class="dash-tab" data-tab="inventory"><span class="tab-icon" data-icon="box"></span> Inventory</button>
+        <button class="dash-tab" data-tab="distribution"><span class="tab-icon" data-icon="truck"></span> Distribution</button>
+        <button class="dash-tab" data-tab="quantification"><span class="tab-icon" data-icon="calculator"></span> Quantification</button>
+        <button class="dash-tab" data-tab="performance"><span class="tab-icon" data-icon="trendUp"></span> Performance Monitoring</button>
+        <button class="dash-tab" data-tab="alerts"><span class="tab-icon" data-icon="alert"></span> AMC Alerts</button>
       </aside>
 
       <main class="dash-main">
@@ -74,7 +74,7 @@
           </div>
           <div class="kpi-row" id="financing-cards"></div>
           <div class="chart-row cols-2">
-            <div class="chart-card"><h4>Allocation of Donation/Fund — By Donor</h4><canvas id="chart-financing-donor"></canvas></div>
+            <div class="chart-card"><h4>Allocation of Donation/Fund, By Donor</h4><canvas id="chart-financing-donor"></canvas></div>
             <div class="chart-card"><h4>Fund Allocated vs. Disbursed</h4><canvas id="chart-financing-fund"></canvas></div>
           </div>
         </div>
@@ -100,7 +100,7 @@
         <!-- DISTRIBUTION -->
         <div class="dash-panel" data-panel="distribution" style="display:none;">
           <div class="dash-toolbar">
-            <h3>Order Lead Time — Lusaka</h3>
+            <h3>Order Lead Time, Lusaka</h3>
             <div class="dash-filters">
               <select class="fake-select"><option>Lusaka</option></select>
               <select class="fake-select"><option>All Programs</option></select>
@@ -109,7 +109,7 @@
           </div>
           <div class="kpi-row" id="distribution-kpis"></div>
           <div class="chart-card">
-            <h4>Order Lead Time — Detail</h4>
+            <h4>Order Lead Time, Detail</h4>
             <div style="overflow-x:auto;">
               <table class="data-table" id="orders-table">
                 <thead><tr><th>Order ID</th><th>Defined Delivery</th><th>Submission Date</th><th>Actual Delivery</th><th>Status</th><th>Turnaround</th><th>Fill Rate</th></tr></thead>
@@ -142,7 +142,7 @@
           </div>
           <div class="chart-row cols-2">
             <div class="chart-card"><h4>R&amp;R Rejection Rate</h4><canvas id="chart-perf-rr"></canvas></div>
-            <div class="chart-card"><h4>Report Timeliness — All Regions</h4><canvas id="chart-perf-timeliness"></canvas></div>
+            <div class="chart-card"><h4>Report Timeliness, All Regions</h4><canvas id="chart-perf-timeliness"></canvas></div>
           </div>
           <div class="kpi-row" id="performance-kpis"></div>
           <div class="card" style="margin-top:6px;">
@@ -162,15 +162,15 @@
         <!-- ALERTS -->
         <div class="dash-panel" data-panel="alerts" style="display:none;">
           <div class="dash-toolbar">
-            <h3>Requisition &amp; Reporting — AMC Colour Alerts</h3>
+            <h3>Requisition &amp; Reporting, AMC Colour Alerts</h3>
             <div class="dash-filters">
               <select class="fake-select"><option>Chingola DHO</option></select>
               <select class="fake-select"><option>Full Supply Products</option></select>
             </div>
           </div>
-          <p class="small">eLMIS Central Edition highlights products where the quantity requested is over the usual Average Monthly Consumption (AMC): <span class="soh-cell green" style="margin:0 4px;">Green</span> normal, <span class="soh-cell red" style="margin:0 4px;">Red</span> above AMC threshold — action needed.</p>
+          <p class="small">eLMIS Central Edition highlights products where the quantity requested is over the usual Average Monthly Consumption (AMC): <span class="soh-cell green" style="margin:0 4px;">Green</span> normal, <span class="soh-cell red" style="margin:0 4px;">Red</span> above AMC threshold, action needed.</p>
           <div class="disclaimer-banner" style="background:var(--teal-tint); border-color:var(--teal-light); color:var(--teal-dark);">
-            ℹ Zambia's logistics system standardizes inventory using <strong>Months of Stock (MOS)</strong>, with targets typically set at 3.0 MOS (up to 4.0 MOS for Essential Medicines at health centres). Two alerts trigger action: falling below <strong>0.5 MOS</strong> (Emergency Order Point) or exceeding the maximum by over a month.
+            <span class="banner-icon" data-icon="info"></span>Zambia's logistics system standardizes inventory using <strong>Months of Stock (MOS)</strong>, with targets typically set at 3.0 MOS (up to 4.0 MOS for Essential Medicines at health centres). Two alerts trigger action: falling below <strong>0.5 MOS</strong> (Emergency Order Point) or exceeding the maximum by over a month.
           </div>
           <div style="overflow-x:auto; margin-top:14px;">
             <table class="data-table" id="alerts-table">

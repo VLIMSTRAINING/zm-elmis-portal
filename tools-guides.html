@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Tools &amp; Guides — eLMIS Zambia</title>
+<title>Tools &amp; Guides, eLMIS Zambia</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css" />
@@ -29,7 +29,7 @@
     <div class="nav-cta">
       <a href="index.html#environments" class="btn btn-secondary btn-sm">Test Environment</a>
       <a href="https://zm-elmis.org/public/pages/login.html" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Production Login</a>
-      <button class="nav-toggle" aria-label="Menu">☰</button>
+      <button class="nav-toggle" aria-label="Menu" data-icon="menu"></button>
     </div>
   </div>
 </header>
@@ -60,7 +60,7 @@
     <div class="section-head">
       <span class="eyebrow">Report Catalogue</span>
       <h2>Key reports across all four categories</h2>
-      <p>The full set of standard eLMIS reports — Administrative, Graphs, Logistics and Maps. See the <a href="about.html#report-categories">About page</a> for what each category is for.</p>
+      <p>The full set of standard eLMIS reports, spanning Administrative, Graphs, Logistics and Maps. See the <a href="about.html#report-categories">About page</a> for what each category is for.</p>
     </div>
     <div class="card" style="overflow-x:auto;">
       <table class="data-table">
@@ -90,14 +90,14 @@
       <div>
         <span class="eyebrow">CHW / Satellite Site App</span>
         <h2>Download &amp; install the mobile app</h2>
-        <p>The Community Health Worker (CHW) / Satellite Site mobile app lets last-mile health workers record stock counts and consumption, even without internet access — data syncs automatically once back online.</p>
+        <p>The Community Health Worker (CHW) / Satellite Site mobile app lets last-mile health workers record stock counts and consumption, even without internet access. Data syncs automatically once back online.</p>
         <div class="card" style="margin-top:10px;">
           <div class="flex justify-between items-center" style="flex-wrap:wrap; gap:16px;">
             <div>
-              <div style="font-weight:700; font-size:16px;">eLMIS CHW App — v3.1</div>
+              <div style="font-weight:700; font-size:16px;">eLMIS CHW App, v3.1</div>
               <div class="small">Android · 38 MB · Released 1 Apr 2026</div>
             </div>
-            <a href="assets/downloads/elmis-chw-app-latest.apk" class="btn btn-primary" download>⬇ Download APK</a>
+            <a href="assets/downloads/elmis-chw-app-latest.apk" class="btn btn-primary" download><span data-icon="download" style="display:inline-flex; vertical-align:middle;"></span> Download APK</a>
           </div>
         </div>
       </div>
@@ -108,7 +108,7 @@
           <li><strong>Download the APK</strong> using the button on this page over Wi-Fi where possible (file is ~38 MB).</li>
           <li><strong>Open the downloaded file</strong> from your Downloads folder or notification tray and tap Install.</li>
           <li><strong>Log in</strong> using the facility code and password issued by your District Pharmacist or eLMIS focal point.</li>
-          <li><strong>Sync your facility list</strong> the first time you're online — after that, the app works fully offline until you next have signal.</li>
+          <li><strong>Sync your facility list</strong> the first time you're online. After that, the app works fully offline until you next have signal.</li>
         </ol>
       </div>
     </div>
@@ -155,27 +155,28 @@
           <div style="font-weight:700;">${u.title}</div>
           <div class="guide-meta">${u.audience} · ${u.format} · ${u.size}</div>
         </div>
-        <a href="${u.file}" class="btn btn-secondary btn-sm" download>⬇ Download</a>
+        <a href="${u.file}" class="btn btn-secondary btn-sm" download><span style="display:inline-flex; vertical-align:middle;">${ICONS.download}</span> Download</a>
       </div>
     `).join("");
 
     // Tools
     document.getElementById("tools-grid").innerHTML = g.tools.map(t => `
       <div class="card">
-        <div class="icon-badge teal">🛠</div>
+        <div class="icon-badge teal">${ICONS.wrench}</div>
         <h3 style="font-size:16px;">${t.title}</h3>
         <p class="small">${t.description}</p>
         <div class="small" style="margin-bottom:12px;">${t.version} · ${t.size}</div>
-        <a href="${t.file}" class="btn btn-secondary btn-sm btn-block" download>⬇ Download</a>
+        <a href="${t.file}" class="btn btn-secondary btn-sm btn-block" download><span style="display:inline-flex; vertical-align:middle;">${ICONS.download}</span> Download</a>
       </div>
     `).join("");
 
     // Related systems (informational, no download)
     document.getElementById("related-systems-grid").innerHTML = g.relatedSystems.map(s => `
       <div class="card">
-        <div class="icon-badge orange">🔗</div>
+        <div class="icon-badge orange">${ICONS.link}</div>
         <h3 style="font-size:16px;">${s.title}</h3>
         <p class="small">${s.description}</p>
+        ${s.link ? `<a href="${s.link}" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">Open →</a>` : ""}
       </div>
     `).join("");
 
