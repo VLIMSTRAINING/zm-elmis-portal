@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ask ZeLISA, eLMIS Zambia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-bar">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">eL</span>
+      <span class="brand-text"><strong>eLMIS Zambia</strong><span>Ministry of Health</span></span>
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="analytics.html">Data &amp; Analytics</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="tools-guides.html">Tools &amp; Guides</a></li>
+        <li><a href="zelisa.html" class="active">Ask ZeLISA</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a href="index.html#environments" class="btn btn-secondary btn-sm">Test Environment</a>
+      <a href="https://zm-elmis.org/public/pages/login.html" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Production Login</a>
+      <button class="nav-toggle" aria-label="Menu" data-icon="menu"></button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Ask ZeLISA</div>
+    <h1>ZeLISA, Logistics &amp; Supply Chain Assistant</h1>
+    <p style="max-width:640px; color:rgba(255,255,255,.85);">Zambia's eLMIS Logistics Intelligence and Supply Chain Agent. Ask about stock levels, orders, requisitions, or general system support.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:36px;">
+  <div class="container">
+    <div class="disclaimer-banner">
+      <span class="banner-icon" data-icon="alert"></span>Prototype demo. ZeLISA's responses here are simulated/canned for illustration. A production build would connect to the eLMIS reporting data and a real assistant backend.
+    </div>
+
+    <div class="zelisa-shell">
+      <aside class="zelisa-side">
+        <h4>Try asking</h4>
+        <button class="suggestion-chip" data-q="What is the stock on hand for Amiloride at Chingola DHO?">What is the stock on hand for Amiloride at Chingola DHO?</button>
+        <button class="suggestion-chip" data-q="What's the status of order #05457?">What's the status of order #05457?</button>
+        <button class="suggestion-chip" data-q="How do I reset my eLMIS password?">How do I reset my eLMIS password?</button>
+        <button class="suggestion-chip" data-q="Where can I download the CHW app?">Where can I download the CHW app?</button>
+        <button class="suggestion-chip" data-q="Why was my R&R form rejected?">Why was my R&amp;R form rejected?</button>
+        <button class="suggestion-chip" data-q="How do I log a support ticket?">How do I log a support ticket?</button>
+        <button class="suggestion-chip" data-q="What is the difference between Central Edition and Facility Edition?">What is the difference between Central and Facility Edition?</button>
+        <button class="suggestion-chip" data-q="What are the Six Rights of eLMIS?">What are the Six Rights of eLMIS?</button>
+        <button class="suggestion-chip" data-q="Who approves an R&R and how does it flow to ZAMMSA?">Who approves an R&amp;R and how does it flow to ZAMMSA?</button>
+        <button class="suggestion-chip" data-q="What is Months of Stock (MOS)?">What is Months of Stock (MOS)?</button>
+
+        <h4 style="margin-top:26px;">ZeLISA can help with</h4>
+        <ul style="padding-left:18px; font-size:13px; color:var(--gray-600); margin:0;">
+          <li style="margin-bottom:8px;">Stock &amp; requisition status</li>
+          <li style="margin-bottom:8px;">Order &amp; delivery tracking</li>
+          <li style="margin-bottom:8px;">Login &amp; access support</li>
+          <li style="margin-bottom:8px;">Report &amp; analytics guidance</li>
+          <li>Escalation to the eLMIS help desk</li>
+        </ul>
+      </aside>
+
+      <div class="zelisa-main">
+        <div class="zelisa-header">
+          <div class="zelisa-avatar">Ze</div>
+          <div>
+            <div style="font-weight:700;">ZeLISA</div>
+            <div class="zelisa-status">Online · Prototype mode</div>
+          </div>
+        </div>
+        <div class="zelisa-messages" id="chat-messages">
+          <div class="msg bot">
+            <span class="banner-icon" data-icon="chat" style="vertical-align:-3px; margin-right:6px;"></span>Hi, I'm <strong>ZeLISA</strong>, the Zambia eLMIS Logistics Intelligence and Supply Chain Agent. Ask me about stock levels, orders, requisitions, or eLMIS support, and I'll do my best to help.
+          </div>
+        </div>
+        <form class="zelisa-input" id="chat-form">
+          <input type="text" id="chat-input" placeholder="Ask ZeLISA about stock, orders, or support…" autocomplete="off" />
+          <button type="submit" aria-label="Send" data-icon="send"></button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer" id="site-footer"></footer>
+
+<script src="assets/js/icons.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/partials.js"></script>
+<script src="assets/js/zelisa.js"></script>
+</body>
+</html>

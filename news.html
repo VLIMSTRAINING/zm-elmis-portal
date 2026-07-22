@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>News &amp; Information, eLMIS Zambia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-bar">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">eL</span>
+      <span class="brand-text"><strong>eLMIS Zambia</strong><span>Ministry of Health</span></span>
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="analytics.html">Data &amp; Analytics</a></li>
+        <li><a href="news.html" class="active">News</a></li>
+        <li><a href="tools-guides.html">Tools &amp; Guides</a></li>
+        <li><a href="zelisa.html">Ask ZeLISA</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a href="index.html#environments" class="btn btn-secondary btn-sm">Test Environment</a>
+      <a href="https://zm-elmis.org/public/pages/login.html" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Production Login</a>
+      <button class="nav-toggle" aria-label="Menu" data-icon="menu"></button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> / News</div>
+    <h1>News &amp; Information</h1>
+    <p style="max-width:640px; color:rgba(255,255,255,.85);">Release notes, announcements, training updates and scheduled maintenance for eLMIS Central Edition, Facility Edition and the CHW mobile app.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="disclaimer-banner">
+      <span class="banner-icon" data-icon="alert"></span>The September 2025 Transition Ceremony item below reflects real, documented eLMIS results. Other items on this page are illustrative sample entries for prototyping. Replace with confirmed release notes before go-live.
+    </div>
+    <div class="filter-bar" id="filter-bar">
+      <button class="filter-chip active" data-filter="all">All</button>
+      <button class="filter-chip" data-filter="Release">Release</button>
+      <button class="filter-chip" data-filter="Announcement">Announcement</button>
+      <button class="filter-chip" data-filter="Training">Training</button>
+      <button class="filter-chip" data-filter="Maintenance">Maintenance</button>
+    </div>
+    <div class="news-list" id="news-list"></div>
+  </div>
+</section>
+
+<footer class="site-footer" id="site-footer"></footer>
+
+<script src="assets/js/icons.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/partials.js"></script>
+<script>
+  let allNews = [];
+  const listEl = document.getElementById("news-list");
+
+  function tagClass(category) {
+    if (category === "Maintenance") return "red";
+    if (category === "Release") return "";
+    return "orange";
+  }
+
+  function render(filter) {
+    const items = filter === "all" ? allNews : allNews.filter(n => n.category === filter);
+    listEl.innerHTML = items.map(n => `
+      <div class="news-item">
+        <div class="news-date">${new Date(n.date).toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" })}</div>
+        <div>
+          <span class="tag ${tagClass(n.category)}">${n.tag}</span>
+          <h3 style="margin-top:8px;">${n.title}</h3>
+          <p class="small">${n.excerpt}</p>
+        </div>
+      </div>
+    `).join("") || `<p class="small">No items in this category yet.</p>`;
+  }
+
+  loadJSON("data/news.json").then((data) => {
+    allNews = data.sort((a, b) => new Date(b.date) - new Date(a.date));
+    render("all");
+  });
+
+  document.getElementById("filter-bar").addEventListener("click", (e) => {
+    const btn = e.target.closest(".filter-chip");
+    if (!btn) return;
+    document.querySelectorAll(".filter-chip").forEach(c => c.classList.remove("active"));
+    btn.classList.add("active");
+    render(btn.getAttribute("data-filter"));
+  });
+</script>
+</body>
+</html>
